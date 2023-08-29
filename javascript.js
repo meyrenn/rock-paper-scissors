@@ -17,8 +17,24 @@ function getComputerChoice() {
         computerChoice = 'Scissors'
     }
 
-    console.log(computerChoice);
     return computerChoice;
 }
 
 getComputerChoice();
+
+// Gets the player's choice
+function getPlayerChoice() {
+    let userInput = prompt("Choose rock, paper, or scissors:")
+    return userInput;
+}
+
+// Plays a single round of the game and returns a string of the result
+function playRound(playerSelection, computerSelection) {
+    let message;
+    
+}
+
+const playerChoice = getPlayerChoice();
+const computerChoice = getComputerChoice();
+
+playRound(playerChoice, computerChoice);
