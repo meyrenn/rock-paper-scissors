@@ -25,7 +25,7 @@ getComputerChoice();
 // Gets the player's choice
 function getPlayerChoice() {
     let userInput = prompt("Choose rock, paper, or scissors:")
-    
+    userInput = userInput.toLowerCase(); // Makes input case in-sensitive
     return userInput;
 }
 
