@@ -1,22 +1,24 @@
-// Randomly returns Rock, Paper, or Scissors
-// idea: random number -> ex: if number is 1, return 'Rock'
+/* 
+Randomly returns Rock, Paper, or Scissors
+
+This function serves as the computer playing
+*/
 function getComputerChoice() {
+    let computerChoice;
     let num = Math.random();
 
     if (num < 0.333) {
-        let computerChoice = 'Rock'
-        return computerChoice;
+        computerChoice = 'Rock'
     }
     else if (num >= 0.333 && num <= 0.666) {
-        let computerChoice = 'Paper'
-        return computerChoice;
+        computerChoice = 'Paper'
     }
     else {
-        let computerChoice = 'Scissors'
-        return computerChoice;
+        computerChoice = 'Scissors'
     }
 
     console.log(computerChoice);
+    return computerChoice;
 }
 
 getComputerChoice();
