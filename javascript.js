@@ -57,12 +57,15 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
         message = "You lose. Rock beats Scissors"
     }
+    else if (playerSelection == 'scissors' && computerSelection == 'Scissors') {
+        message = "It's a tie!"
+    }
     
-    console.log(message);
+    // Check results with: console.log(message);
     return message;
 }
 
 const playerChoice = getPlayerChoice();
 const computerChoice = getComputerChoice();
 
-playRound(playerChoice, computerChoice);
+console.log(playRound(playerChoice, computerChoice));
