@@ -62,10 +62,11 @@ function playRound(playerSelection, computerSelection) {
     }
     
     // Check results with: console.log(message);
+
     return message;
 }
 
 const playerChoice = getPlayerChoice();
 const computerChoice = getComputerChoice();
 
-console.log(playRound(playerChoice, computerChoice));
+playRound(playerChoice, computerChoice);
