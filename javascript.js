@@ -80,10 +80,10 @@ function game() {
     }
 
     for (let i = 0; i < 5; i++ ) {
-        const newPlayerChoice = getPlayerChoice();
-        const newComputerChoice = getComputerChoice();
+        const playerChoice = getPlayerChoice();
+        const computerChoice = getComputerChoice();
 
-        console.log((playRound(newPlayerChoice, newComputerChoice)));
+        console.log((playRound(playerChoice, computerChoice)));
     }
 
     function getWinner() {
