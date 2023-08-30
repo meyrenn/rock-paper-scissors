@@ -35,33 +35,42 @@ const computerChoice = getComputerChoice();
 /* Plays a 5 round game that keeps score and reports a winner 
 or loser at the end */
 function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+
     // Plays a single round of the game and returns a string of the result
     function playRound(playerSelection, computerSelection) {
         let message;
 
         if (playerSelection == 'rock' && computerSelection == 'Paper') {
             message = "You lose! Paper beats Rock"
+            computerScore++;
         }
         else if (playerSelection == 'rock' && computerSelection == 'Scissors') {
             message = "You win! Rock beats Scissors"
+            playerScore++;
         }
         else if (playerSelection == 'rock' && computerSelection == 'Rock') {
             message = "It's a tie!"
         }
         else if (playerSelection == 'paper' && computerSelection == 'Rock') {
             message = "You win! Paper beats Rock"
+            playerScore++;
         }
         else if (playerSelection == 'paper' && computerSelection == 'Paper') {
             message = "It's a tie!"
         }
         else if (playerSelection == 'paper' && computerSelection == 'Scissors') {
             message = "You lose. Scissors beat Paper"
+            computerScore++;
         }
         else if (playerSelection == 'scissors' && computerSelection == 'Paper') {
             message = "You win! Scissors beat Paper"
+            playerScore++;
         }
         else if (playerSelection == 'scissors' && computerSelection == 'Rock') {
             message = "You lose. Rock beats Scissors"
+            computerScore++;
         }
         else if (playerSelection == 'scissors' && computerSelection == 'Scissors') {
             message = "It's a tie!"
@@ -74,12 +83,11 @@ function game() {
 
     playRound(playerChoice, computerChoice);
 
-    let playerScore = 0;
-    let computerScore = 0;
-
     for (let i = 0; i < 5; i++ ) {
-        console.log(playRound(playerChoice, computerChoice));
-
+        (playRound(playerChoice, computerChoice));
+        
+        console.log("Your score: " + playerScore);
+        console.log("Computer's score: " + computerScore);
     }
 
 
