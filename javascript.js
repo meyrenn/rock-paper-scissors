@@ -29,9 +29,6 @@ function getPlayerChoice() {
     return userInput;
 }
 
-const playerChoice = getPlayerChoice();
-const computerChoice = getComputerChoice();
-
 let playerScore = 0;
 let computerScore = 0;
 let winner;
