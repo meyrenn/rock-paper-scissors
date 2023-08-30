@@ -32,12 +32,12 @@ function getPlayerChoice() {
 const playerChoice = getPlayerChoice();
 const computerChoice = getComputerChoice();
 
+let playerScore = 0;
+let computerScore = 0;
+
 /* Plays a 5 round game that keeps score and reports a winner 
 or loser at the end */
 function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-
     // Plays a single round of the game and returns a string of the result
     function playRound(playerSelection, computerSelection) {
         let message;
@@ -81,9 +81,10 @@ function game() {
         return message;
     }
 
-    playRound(playerChoice, computerChoice);
-
     for (let i = 0; i < 5; i++ ) {
+        const newPlayerChoice = getPlayerChoice();
+        const newComputerChoice = getComputerChoice();
+
         (playRound(playerChoice, computerChoice));
         
         console.log("Your score: " + playerScore);
