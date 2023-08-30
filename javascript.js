@@ -85,7 +85,7 @@ function game() {
         const newPlayerChoice = getPlayerChoice();
         const newComputerChoice = getComputerChoice();
 
-        (playRound(playerChoice, computerChoice));
+        (playRound(newPlayerChoice, newComputerChoice));
         
         console.log("Your score: " + playerScore);
         console.log("Computer's score: " + computerScore);
