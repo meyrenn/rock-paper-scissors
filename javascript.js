@@ -61,7 +61,7 @@ function playRound(playerSelection, computerSelection) {
         message = "It's a tie!"
     }
     
-    // Check results with: console.log(message);
+    // Check results with console.log(message);
 
     return message;
 }
@@ -70,3 +70,16 @@ const playerChoice = getPlayerChoice();
 const computerChoice = getComputerChoice();
 
 playRound(playerChoice, computerChoice);
+
+/* Plays a 5 round game that keeps score and reports a winner 
+or loser at the end */
+function game() {
+    for (let i = 0; i < 5; i++ ) {
+        console.log(playRound(playerChoice, computerChoice));
+
+    }
+
+
+}
+
+game();
