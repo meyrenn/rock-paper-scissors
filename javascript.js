@@ -34,6 +34,7 @@ const computerChoice = getComputerChoice();
 
 let playerScore = 0;
 let computerScore = 0;
+let winner;
 
 /* Plays a 5 round game that keeps score and reports a winner 
 or loser at the end */
@@ -85,13 +86,24 @@ function game() {
         const newPlayerChoice = getPlayerChoice();
         const newComputerChoice = getComputerChoice();
 
-        (playRound(newPlayerChoice, newComputerChoice));
-        
-        console.log("Your score: " + playerScore);
-        console.log("Computer's score: " + computerScore);
+        console.log((playRound(newPlayerChoice, newComputerChoice)));
     }
 
+    function getWinner() {
+        if (playerScore > computerScore) {
+            winner = "GAME OVER. You won!"
+        }
+        else if (playerScore < computerScore) {
+            winner = "GAME OVER. You lost."
+        }
+        else {
+            winner = "GAME OVER. It's a tie!"
+        }
 
+        return winner;
+    }   
+
+    console.log(getWinner());
 }
 
 game();
